@@ -1,0 +1,91 @@
+
+  <body>
+<main id="content">
+  <h1 id="title">ID Card Form</h1>
+  <hr/>
+  <form id="survey-form">
+    <div class="row">
+      <div class="col-25">
+        <label for="name">*Name:</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="name" placeholder="Enter your name" required class="inputs" required>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="email">*DOB:</label>
+      </div>
+      <div class="col-75">
+        <input type="date" id="birthday" placeholder="Enter your DOB" required class="inputs">
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="photo">*Photo:</label>
+      </div>
+      <div class="col-75">
+        <input type="file" id="photo" class="inputs"  required>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="">
+         *Blood Group
+        </label>
+      </div>
+      <div class="col-75">
+        <select name="role" id="" class="inputs">
+          <option value="student"></option>
+          <option value="student">A+</option>
+          <option value="full time">A-</option>
+          <option value="full time">B+</option>
+          <option value="full time leaner">B-</option>
+          <option value="not to say">O+</option>
+          <option value="other">O-</option>
+          <option value="full time">AB+</option>
+          <option value="full time">AB-</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="tel">*Mobile No:</label>
+      </div>
+      <div class="col-75">
+        <input type="tel" id="tel" placeholder="Enter your Mobile No." pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="comment">
+          *Address
+        </label>
+      </div>
+      <div class="col-75">
+        <textarea name="" id="comment" class="comment" cols="" rows="" placeholder="Write your address...."></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="">
+         *Academic Year
+        </label>
+      </div>
+      <div class="col-75">
+        <select name="role" id="" class="inputs">
+          <option value="student"></option>
+          <option value="student">MCA 2020 pattern (2 Years)</option>
+          <option value="full time"> MCA 2019 pattern (2 Years)</option>
+          <option value="full time"> MCA 2015 pattern (3 Years)</option>
+        </select>
+      </div>
+    </div>
+    <input type="submit" value="Submit" class="btn">
+  </form>
+</main>
+</body>
+<app-footer></app-footer>

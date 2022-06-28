@@ -1,0 +1,83 @@
+body{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('https://images.indianexpress.com/2021/06/Untitled-design-4-1.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: cover;
+    color:#5b555f;
+}
+
+#content{
+   width: 70%;
+   background-color: rgb(196, 229, 232);
+   padding: 20px;
+   margin: 20px auto;
+   border-radius: 5px;
+}
+
+h1{
+    text-align: center;
+}
+
+.comment{
+    height: 100px;
+    background-color: #f8f8f8;
+    box-sizing: border-box;
+    resize: none;
+    padding: 10px;
+    resize: vertical;
+    overflow: auto;
+}
+.btn{
+    display: block;
+    width: 100%;
+    border: 1px solid white;
+    background: #0da1c2;
+    padding: 10px;
+    color: white;
+    font-size: 1.2rem;
+}
+
+input[type=text], input[type=date],input[type=tel],
+input[type=number], select, textarea{
+    width:100%;
+    box-sizing: border-box;
+    padding: 12px 20px;
+    border: 1px solid #006400;
+    margin: 5px 0px 10px 0px;
+    
+}
+label{
+    display: inline-block;
+    padding: 12px 12px 12px 0;
+}
+
+.col-25{
+    width: 25%;
+    float: left;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+.row::after{
+    content:"";
+    display: table;
+    clear: both; 
+}
+
+@media screen and (max-width:600px){
+    .col-25, .col-75{
+        margin-top: 0px;
+        width: 100%;
+    }
+    .likely,#future-improove{
+        display: grid;
+        grid-template-columns:1fr ;
+    }
+}

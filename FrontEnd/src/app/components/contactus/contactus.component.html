@@ -1,0 +1,106 @@
+<body>
+	<div class="container">
+		<div class="innerwrap">
+		
+			<section class="section1 clearfix">
+				<div class="textcenter">
+					<span class="shtext">Contact Us</span>
+					<span class="seperator"></span>
+					<h1>Drop Us a Mail</h1>
+				</div>
+			</section>
+		
+			<section class="section2 clearfix">
+				<div class="col2 column1 first">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d406.90572704044433!2d73.7545170131981!3d20.00742380268652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xcc138500bb7fdc44!2sBhonsala+Bhavan!5e1!3m2!1sen!2sin!4v1530161247409" width="500" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>								
+				</div>
+				<div class="col2 column2 last">
+					<div class="sec2innercont">
+						<div class="sec2addr">
+							<p>45 BC, a Latin professor at Hampden-Sydney College in Virginia</p>
+							<p><span class="collig">Phone :</span> +91 976885083</p>
+							<p><span class="collig">Email :</span> vivek.mengu016@gmail.com</p>
+							<p><span class="collig">Fax :</span> +91 9768850839</p>
+						</div>
+					</div>
+					<div class="sec2contactform">
+						<h3 class="sec2frmtitle">Want to Know More?? Drop Us a Mail</h3>
+
+						<form class="form" (ngSubmit)="insertData()" >
+					    <div class="clearfix">
+							<div class="row">
+								<div class="col mb-3">
+								<label for="fullname" class="form-label">First Name</label>
+								<input type="text" name="name" class="form-control" [(ngModel)]="contactus.first">
+								<div class="form-text text-white" *ngIf="FirstName.errors?.['required'] && (FirstName.touched || FirstName.dirty)">
+								  First Name is required.
+							  </div>
+							  <div class="form-text text-white" *ngIf="FirstName.errors?.['pattern'] && (FirstName.touched || FirstName.dirty)">
+								  Name should start with an alphabet.
+							  </div>
+                              </div>&nbsp;&nbsp;
+						   
+							<div class="col mb-3">
+							<div class="row">
+								 <label for="fullname" class="form-label">Last Name</label>
+								 <input type="text" name="name" class="form-control" [(ngModel)]="contactus.last">
+								 <div class="form-text text-white" *ngIf="LastName.errors?.['required'] && (LastName.touched || LastName.dirty)">
+								   Last Name is required.
+							      </div>
+							   <div class="form-text text-white" *ngIf="LastName.errors?.['pattern'] && (LastName.touched || LastName.dirty)">
+								   Name should start with an alphabet.
+							   </div>
+							 </div>
+                           </div>
+					     </div>
+						</div>
+                    
+					<div class="clearfix">
+						 <div class="row">
+							<div class="col mb-3">
+								  <label for="email" class="form-label">Email</label>
+								  <input type="text" name="name" class="form-control"  [(ngModel)]="contactus.email" >
+								  <div class="form-text text-white" *ngIf="Email.errors?.['required'] && (Email.touched || Email.dirty)">
+									Email is required.
+								</div>
+								<div class="form-text text-white" *ngIf="Email.errors?.['email'] && (Email.touched || Email.dirty)">
+									Email is invalid.
+								</div>
+							</div>&nbsp;&nbsp;
+						
+							<div class="col mb-3">
+								<div class="row">
+									 <label for="fullname" class="form-label">Mobile Number</label>
+									 <input type="text" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" class="form-control" [(ngModel)]="contactus.mobile">
+									 <div class="form-text text-white" *ngIf="Mobile.errors?.['required'] && (Mobile.touched || Mobile.dirty)">
+									   Mobile Number is required.
+									  </div>
+								   
+								 </div>
+							   </div>
+						</div>
+                    </div>
+							
+					<div class="row">
+								<label for="mobile" class="form-label">Message</label>  
+								<textarea type="text" name="name" class="form-control"  [(ngModel)]="contactus.massage" ></textarea>
+							  </div>
+								<br>
+							   <button class="btn btn-dark btn-sm mt-4">Submit</button>&nbsp;
+							   <input  class="btn btn-dark btn-sm mt-4"type="reset" value="Reset">
+							 
+							</form>
+
+
+
+
+
+					</div>
+
+				</div>
+			</section>
+		
+		</div>
+	</div>
+</body>
+<app-footer></app-footer>

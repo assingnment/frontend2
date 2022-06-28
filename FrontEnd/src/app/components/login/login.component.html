@@ -1,0 +1,50 @@
+
+<h1>ENQUIRY FORM</h1>
+<br>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+   
+<div class="container">
+ <form class="form" (ngSubmit)="insertData()">
+  <div class="form__group">
+     <div class="row">
+      <label for="fullname" class="form-label">FullName</label>
+      <input type="text" name="name" class="form-control" [(ngModel)]="admission.fullname">
+      <div class="form-text text-white" *ngIf="FullName.errors?.['required'] && (FullName.touched || FullName.dirty)">
+        FullName is required.
+    </div>
+    <div class="form-text text-white" *ngIf="FullName.errors?.['pattern'] && (FullName.touched || FullName.dirty)">
+        Name should start with an alphabet.
+    </div>
+    </div>
+      <div class="row">
+        <label for="email" class="form-label">Email</label>
+        <input type="text" name="name" class="form-control"  [(ngModel)]="admission.email" >
+        
+        <div class="form-text text-white" *ngIf="Email.errors?.['required'] && (Email.touched || Email.dirty)">
+          Email is required.
+      </div>
+      <div class="form-text text-white" *ngIf="Email.errors?.['email'] && (Email.touched || Email.dirty)">
+          Email is invalid.
+      </div>
+  </div>
+        
+        <div class="row">
+          <label for="mobile" class="form-label">Mobile Number</label>    
+      <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" class="form-control"  [(ngModel)]="admission.pno">
+      <div class="form-text text-white" *ngIf="Mobile.errors?.['required'] && (Mobile.touched || Mobile.dirty)">
+        Mobile Number is required.
+    </div>
+    </div>
+    
+      <div class="row">
+      <label for="mobile" class="form-label">Message</label>  
+      <textarea type="text" name="name" class="form-control"  [(ngModel)]="admission.message" ></textarea>
+    </div>
+      <br>
+      <button class="btn btn-dark btn-sm mt-4">Submit</button>&nbsp;
+      <input  class="btn btn-dark btn-sm mt-4"type="reset" value="Reset">
+   </div>
+  </form>
+
+
+
